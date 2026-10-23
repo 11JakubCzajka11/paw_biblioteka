@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteka</title>
+    <label for="publish-date">Data wydania:</label>
+
+    <input
+    type="date"
+    id="publish-date"
+    name="publish_date"
+    >
+  <label for="email">E-mail:</label>
+
+    <input
+        type="email"
+        id="email"
+        name="email"
+        required
+    >
 </head>
 <body>
 
@@ -18,6 +33,7 @@
             <a href="#about">O bibliotece</a>
             <a href="#books">Książki</a>
             <a href="#rules">Jak wypożyczyć?</a>
+            <a href="add_book.html">Dodaj książkę</a>
         </nav>
     </header>
 
@@ -44,7 +60,64 @@
                 width="120"
             >
         </section>
+        <form method="get">
 
+            <div>
+                <label for="query">
+                    Tytuł lub autor:
+                </label>
+
+                <input
+                    type="text"
+                    id="query"
+                    name="query"
+                    placeholder="np. Solaris"
+                >
+            </div>
+
+            <div>
+                <label for="search-category">
+                    Kategoria:
+                </label>
+
+                <select
+                    id="search-category"
+                    name="category"
+                >
+                    <option value="">
+                        Wszystkie
+                    </option>
+
+                    <option value="fantasy">
+                        Fantasy
+                    </option>
+
+                    <option value="science-fiction">
+                        Science fiction
+                    </option>
+
+                    <option value="crime">
+                        Kryminał
+                    </option>
+                </select>
+            </div>
+
+            <button type="submit">
+                Szukaj
+            </button>
+            <div>
+                <label for="isbn">
+                    ISBN:
+                </label>
+
+                <input
+                    type="text"
+                    id="isbn"
+                    name="isbn"
+                    placeholder="np. 978-83-..."
+                >
+            </div>
+        </form>
         <section id="books">
             <h2>Polecane książki</h2>
 
