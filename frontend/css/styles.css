@@ -17,11 +17,37 @@ section {
 }
 
 header {
-    background-color: #254636;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    background-color: #1f3c5c;
     color: white;
 
     padding: 20px;
 }
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 
 nav {
     margin-top: 15px;
@@ -154,3 +180,12 @@ footer {
 
     background-color: #254636;
 }
+
+.fantasy {
+    border-left: 6px solid #7b4fa3;
+}
+
+.science-fiction {
+    border-left: 6px solid #2f7c9f;
+}
+
