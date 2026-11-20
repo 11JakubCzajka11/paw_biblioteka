@@ -1,21 +1,21 @@
 {% extends "biblioteka/base.html" %}
 
-
-{% block title %}
-    Autorzy — Biblioteka
-{% endblock %}
-
+{% block title %}Autorzy — Biblioteka{% endblock %}
 
 {% block content %}
+<section>
+    <h2>Autorzy</h2>
 
-    <section>
-        <h2>Autorzy</h2>
-
-        <ul>
-            <li>Stanisław Lem</li>
-            <li>Bolesław Prus</li>
-            <li>J.R.R. Tolkien</li>
-        </ul>
-    </section>
-
+    <div class="author-list">
+        {% for author in authors %}
+            <article class="author-card">
+                <h3>{{ author.first_name }} {{ author.last_name }}</h3>
+                <p>Liczba książek: {{ author.books.count }}</p>
+                <a class="button-link" href="{% url 'author_detail' author.id %}">Szczegóły</a>
+            </article>
+        {% empty %}
+            <p>Brak autorów do wyświetlenia.</p>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}
